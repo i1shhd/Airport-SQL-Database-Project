@@ -1,62 +1,77 @@
  # DATABASE CREATION
 
 CREATE TABLE FLIGHT (
-Flight_ID INT PRIMARY KEY,
-Departure_Time TIMESTAMP NOT NULL, Arrival_Time TIMESTAMP NOT NULL,
-Duration_A TIMESTAMP,
-Date_A DATE NOT NULL, Status_A VARCHAR (50), Seat_Availability INT,
-Gate_Number VARCHAR (10),
-Airline VARCHAR (58),
-Aircraft_Type VARCHAR(50),
-Departure_Airport VARCHAR (50) NOT NULL,
-Arrival_Airport VARCHAR (50) NOT NULL
+ Flight_ID INT PRIMARY KEY,
+ Departure_Time TIMESTAMP NOT NULL,
+ Arrival_Time TIMESTAMP NOT NULL,
+ Duration_A TIMESTAMP,
+ Date_A DATE NOT NULL,
+ Status_A VARCHAR (50),
+ Seat_Availability INT,
+ Gate_Number VARCHAR (10),
+ Airline VARCHAR (50),
+ Aircraft_Type VARCHAR(50),
+ Departure_Airport VARCHAR (50) NOT NULL,
+ Arrival_Airport VARCHAR (50) NOT NULL
 );
+
+
 CREATE TABLE DEPARTMENT (
-Department_ID INT PRIMARY KEY,
-Department_Name VARCHAR (100) NOT NULL,
-Location_A VARCHAR (100), Phone_Number VARCHAR (20)
+ Department_ID INT PRIMARY KEY,
+ Department_Name VARCHAR (100) NOT NULL,
+ Location_A VARCHAR (100),
+ Phone_Number VARCHAR (20)
 )؛
  
 CREATE TABLE PASSENGER (
-Passenger_ID INT PRIMARY KEY,
-First_name VARCHAR (10) NOT NULL, Last_Name VARCHAR (10) NOT NULL,
-Passenger_Name VARCHAR(21) AS (CONCAT (First_name," ", Last_Name)),
-Passport_Number VARCHAR (15) UNIQUE,
-Email VARCHAR2 (100) UNIQUE,
-Date_of_Birth DATE,
-NationaLity VARCHAR (50), Phone_Number VARCHAR (20),
-Gender CHAR(1) CHECK (Gender IN ('M', 'F')),
+ Passenger_ID INT PRIMARY KEY,
+ First_name VARCHAR (10) NOT NULL,
+ Last_Name VARCHAR (10) NOT NULL,
+ Passenger_Name VARCHAR(21) AS (CONCAT (First_name,' ', Last_Name)),
+ Passport_Number VARCHAR (15) UNIQUE,
+ Email VARCHAR2 (100) UNIQUE,
+ Date_of_Birth DATE,
+ NationaLity VARCHAR (50), 
+ Phone_Number VARCHAR (20),
+ Gender CHAR(1) CHECK (Gender IN ('M', 'F')),
 FLIGHT_ID INT NOT NULL,
 FOREIGN KEY (FLIGHT_ID) REFERENCES FLIGHT (FLIGHT_ID)
 );
 
 
 CREATE TABLE EMPLOYEE (
-EmpLoyee_ID INT PRIMARY KEY,
-First_name VARCHAR (10) NOT NULL,
-Last_Name VARCHAR (10) NOT NULL,
-EmpLoyee_Name VARCHAR (21) AS (CONCAT (First_name," ", Last_Name) ),
-Email VARCHAR (100) UNIQUE,
-Position_A VARCHAR (50), Salary DECIMAL (10, 2),
-Gender CHAR (1) CHECK (Gender IN ('M', 'F')),
-Phone_Number VARCHAR (20),
-Department_ID INT,
-FOREIGN KEY (Department_ID) REFERENCES DEPARTMENT (Department_ID) ON DELETE SET NULL
+ EmpLoyee_ID INT PRIMARY KEY,
+ First_name VARCHAR (10) NOT NULL,
+ Last_Name VARCHAR (10) NOT NULL,
+ EmpLoyee_Name VARCHAR (21) AS (CONCAT (First_name,' ', Last_Name)),
+ Email VARCHAR (100) UNIQUE,
+ Position_A VARCHAR (50),
+ Salary DECIMAL (10, 2),
+ Gender CHAR (1) CHECK (Gender IN ('M', 'F')),
+ Phone_Number VARCHAR (20),
+ Department_ID INT,
+ FOREIGN KEY (Department_ID) REFERENCES DEPARTMENT (Department_ID) ON DELETE SET NULL
 )؛
 
 CREATE TABLE TICKET (
-Ticket_ID INT PRIMARY KEY, Travel_Date DATE NOT NULL,
-Seat_Number VARCHAR (10),
-Status_S VARCHAR (50),
-Price DECIMAL (10, 2) NOT NULL,
-Payment_Method VARCHAR (50), Passenger_ID INT NOT NULL,
-Flight_ID INT NOT NULL,
-FOREIGN KEY (Passenger_ID) REFERENCES PASSENGER (Passenger_ID) ON DELETE CASCADE, FOREIGN KEY (Flight_ID) REFERENCES FLIGHT (Flight_ID) ON DELETE CASCADE);
+ Ticket_ID INT PRIMARY KEY,
+ Travel_Date DATE NOT NULL,
+ Seat_Number VARCHAR (10),
+ Status_S VARCHAR (50),
+ Price DECIMAL (10, 2) NOT NULL,
+ Payment_Method VARCHAR (50),
+ Passenger_ID INT NOT NULL,
+ Flight_ID INT NOT NULL,
+ FOREIGN KEY (Passenger_ID) REFERENCES PASSENGER (Passenger_ID) ON DELETE CASCADE,
+ FOREIGN KEY (Flight_ID) REFERENCES FLIGHT (Flight_ID) ON DELETE CASCADE
+);
 
 
 CREATE TABLE BOARDING (
-Ticket_ID INT NOT NULL, PNR INT NOT NULL, PRIMARY KEY (Ticket_ID, PNR),
-FOREIGN KEY (Ticket_ID) REFERENCES TICKET(Ticket_ID) ON DELETE CASCADE
+ Ticket_ID INT NOT NULL, 
+ PNR INT NOT NULL, 
+ PRIMARY KEY (Ticket_ID, PNR),
+ FOREIGN KEY (Ticket_ID) REFERENCES TICKET(Ticket_ID) ON DELETE CASCADE
 )؛
 
 
