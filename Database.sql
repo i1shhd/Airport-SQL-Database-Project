@@ -15,8 +15,9 @@ Arrival_Airport VARCHAR (50) NOT NULL
 CREATE TABLE PASSENGER (
 Passenger_ID INT PRIMARY KEY,
 First_name VARCHAR (10) NOT NULL, Last_Name VARCHAR (10) NOT NULL,
-Passenger_Name VARCHAR(21) AS (CONCAT (First_name, ', Last_Name)), Passport_Number VARCHAR (15) UNIQUE,
-Email VARCHAR (100) - UNIQUE,
+Passenger_Name VARCHAR(21) AS (CONCAT (First_name," ", Last_Name)),
+Passport_Number VARCHAR (15) UNIQUE,
+Email VARCHAR2 (100) UNIQUE,
 Date_of_Birth DATE,
 NationaLity VARCHAR (50), Phone_Number VARCHAR (20),
 Gender CHAR(1) CHECK (Gender IN ('M', 'F'.'0')),
@@ -38,14 +39,13 @@ CREATE TABLE EMPLOYEE (
 EmpLoyee_ID INT PRIMARY KEY,
 First_name VARCHAR (10) NOT NULL,
 Last_Name VARCHAR (10) NOT NULL,
-EmpLoyee_Name VARCHAR (21) AS (CONCAT (First_name,, Last_Name) ),
+EmpLoyee_Name VARCHAR (21) AS (CONCAT (First_name," ", Last_Name) ),
 Email VARCHAR (100) UNIQUE,
 Position_A VARCHAR (50), Salary DECIMAL (10, 2),
-Gender CHAR (1) CHECK (Gender IN ('M', "F', "0")), Phone_Number VARCHAR (20),
+Gender CHAR (1) CHECK (Gender IN ('M', 'F')),
+Phone_Number VARCHAR (20),
 Department_ID INT,
 FOREIGN KEY (Department_ID) REFERENCES DEPARTMENT (Department_ID) ON DELETE SET NULL
-23ai
-Cor
 )؛
 
 CREATE TABLE DEPARTMENT (
