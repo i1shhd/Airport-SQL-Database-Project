@@ -2,6 +2,10 @@
 
 A relational database system developed using Oracle SQL and PL/SQL to manage airport operations. The project demonstrates database design, normalization, relational modeling, constraints, triggers, and SQL querying through a realistic airport management scenario.
 
+## Entity Relationship Diagram
+
+![ERD](ERD.png)
+
 ## Features
 
 - Flight Management
@@ -50,9 +54,6 @@ Airport-Database-System/
 3. Execute `Trigger.sql`
 4. Run any query from `Queries.sql`
 
-## Entity Relationship Diagram
-
-![ERD](ERD.png)
 
 ## Relational Model
 
