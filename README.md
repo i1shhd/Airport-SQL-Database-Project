@@ -57,3 +57,10 @@ Airport-Database-System/
 ## Relational Model
 
 ![Relational Model](Relational_Model.png)
+
+
+-- ==========================================
+-- Airport Database System
+-- Oracle SQL
+-- Author: Shahad Alshaibani
+-- ==========================================
