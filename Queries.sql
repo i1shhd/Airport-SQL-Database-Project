@@ -1,3 +1,8 @@
+-- ==========================================
+-- Airport Database System
+-- Oracle SQL
+-- Author: Shahad Alshaibani
+-- ==========================================
 -- Sample SQL Queries
 -- These example queries demonstrate how to retrieve and analyze data
 -- from the Airport Database System.
