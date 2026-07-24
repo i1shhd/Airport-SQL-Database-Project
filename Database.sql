@@ -1,4 +1,10 @@
- # DATABASE CREATION
+-- ==========================================
+-- Airport Database System
+-- Oracle SQL
+-- Author: Shahad Alshaibani
+-- ==========================================
+
+# DATABASE CREATION
 
 CREATE TABLE FLIGHT (
  Flight_ID INT PRIMARY KEY,
