@@ -127,6 +127,8 @@ VALUES
  TO_DATE('2025-11-09','YYYY-MM-DD'),
  'On Time',120,'D4','Flynas','A321','Riyadh','Rome');
 
+
+
 INSERT INTO PASSENGER
 (Passenger_ID, First_name, Last_Name, Passport_Number, Email, Date_of_Birth, Nationality, Phone_Number, Gender, Flight_ID, Age)
 VALUES
