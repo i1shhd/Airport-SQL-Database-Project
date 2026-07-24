@@ -88,8 +88,3 @@ UPDATE FLIGHT SET Departure_Airport = 'EAM', Arrival_Airport = 'JED' WHERE Fligh
 UPDATE FLIGHT SET Departure_Airport = 'RUH', Arrival_Airport = 'KEF' WHERE Flight_ID = 13;
 
 UPDATE FLIGHT SET Departure_Airport = 'RUH', Arrival_Airport = 'FCO' WHERE Flight_ID = 14;
-
-  
-
-
-
