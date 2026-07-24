@@ -134,7 +134,7 @@ INSERT INTO PASSENGER
 VALUES
 (1, 'Manal', 'Aldawais', 'P12345', 'manal@email.com', TO_DATE('2001-05-01','YYYY-MM-DD'), 'Saudi', '0551001001', 'F', 1, 24),
 
-(2, 'Al-jawhara', 'Hussien', 'P22345', 'aljawhara@email.com', TO_DATE('2004-02-20','YYYY-MM-DD'), 'Saudi', '0552002002', 'F', 2, 21),
+(2, 'Al-jawhara', 'Hussein', 'P22345', 'aljawhara@email.com', TO_DATE('2004-02-20','YYYY-MM-DD'), 'Saudi', '0552002002', 'F', 2, 21),
 
 (3, 'Al-hanouf', 'Yahya', 'P32345', 'alhanouf@email.com', TO_DATE('2003-08-18','YYYY-MM-DD'), 'Saudi', '0553003003', 'F', 3, 22),
 
@@ -144,7 +144,7 @@ VALUES
 
 (6, 'Dalal', 'Maleed', 'P62345', 'dalal@email.com', TO_DATE('2003-09-25','YYYY-MM-DD'), 'Saudi', '0556006006', 'F', 6, 22),
 
-(7, 'Rimas', 'Saleem', 'P72345', 'rimas@email.com', TO_DATE('2005-11-30','YYYY-MM-DD'), 'Saudi', '0557007007', 'F', 7, 20),
+(7, 'Rimas', 'Salem', 'P72345', 'rimas@email.com', TO_DATE('2005-11-30','YYYY-MM-DD'), 'Saudi', '0557007007', 'F', 7, 20),
 
 (8, 'Raghad', 'AbuSaq', 'P82345', 'raghad@email.com', TO_DATE('2006-03-11','YYYY-MM-DD'), 'Saudi', '0558008008', 'F', 8, 19),
 
@@ -156,7 +156,7 @@ VALUES
 
 (12, 'Razan', 'Abuabid', 'P86482', 'razan@email.com', TO_DATE('2004-06-18','YYYY-MM-DD'), 'Saudi', '0551010001', 'F', 12, 22),
 
-(13, 'Fatima', 'Al-Mirdas', 'P99875', 'fatima@email.com', TO_DATE('2005-01-26','YYYY-MM-DD'), 'Saudi', '0559099909', 'F', 14, 21),
+(13, 'Fatima', 'Al-Mirdaf', 'P99875', 'fatima@email.com', TO_DATE('2005-01-26','YYYY-MM-DD'), 'Saudi', '0559099909', 'F', 14, 21),
 
 (14, 'Shahad', 'Alshaibani', 'P10915', 'shahad@email.com', TO_DATE('2005-09-05','YYYY-MM-DD'), 'Saudi', '0550106501', 'F', 11, 21),
 
@@ -196,77 +196,20 @@ VALUES
 
 (15, TO_DATE('2025-03-13','YYYY-MM-DD'), '19A', 'Confirmed', 1500.00, 'Debit Card', 15, 8);
 
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(1, 100001);
 
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(2, 100002);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(3, 100003);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(4, 100004);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(5, 100005);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(6, 100006);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(7, 100007);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(8, 100008);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(9, 100009);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(10, 100010);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(11, 100011);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(12, 100012);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(13, 100013);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
-(14, 100014);
-
-INSERT INTO BOARDING
-(Ticket_ID, PNR)
-VALUES
+INSERT INTO BOARDING (Ticket_ID, PNR) VALUES
+(1, 100001),
+(2, 100002),
+(3, 100003),
+(4, 100004),
+(5, 100005),
+(6, 100006),
+(7, 100007),
+(8, 100008),
+(9, 100009),
+(10, 100010),
+(11, 100011),
+(12, 100012),
+(13, 100013),
+(14, 100014),
 (15, 100015);
