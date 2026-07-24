@@ -15,6 +15,10 @@ A relational database system developed using Oracle SQL and PL/SQL to manage air
 - Employee & Department Management
 - Data Integrity using Primary & Foreign Keys
 - Constraints and Trigger Implementation
+  
+## Relational Model
+
+![Relational Model](Relational_Model.png)
 
 ## Technologies
 
@@ -53,11 +57,6 @@ Airport-Database-System/
 2. Execute `Insert_Data.sql`
 3. Execute `Trigger.sql`
 4. Run any query from `Queries.sql`
-
-
-## Relational Model
-
-![Relational Model](Relational_Model.png)
 
 
 -- ==========================================
