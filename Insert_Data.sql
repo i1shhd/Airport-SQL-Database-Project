@@ -1,3 +1,9 @@
+-- ==========================================
+-- Airport Database System
+-- Oracle SQL
+-- Author: Shahad Alshaibani
+-- ==========================================
+
 INSERT INTO DEPARTMENT
 VALUES
 (1, 'HR', 'Building A', '0111001001'),
